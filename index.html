@@ -24,10 +24,10 @@
                         </div>
                         <button type="submit" class="w-100 mt-4 bg-primary text-light border-0 rounded p-2 display-6" style="font-weight: bold;">Log In</button>
                         <div class="form-group mt-3 text-center">
-                            <a href="" class="text-decoration-none">Forgot Password?</a>
+                            <a class="text-decoration-none" id="forgot-password" style="cursor: pointer;">Forgot Password?</a>
                         </div>
                         <hr/>
-                        <button type="submit" class="w-50 mt-2 mb-5 bg-success border-0 text-light rounded p-3" style="font-weight: bold;">Create new account</button>
+                        <button type="button" id="create-account" class="w-50 mt-2 mb-5 bg-success border-0 text-light rounded p-3" style="font-weight: bold;">Create new account</button>
                     </form>
                     <div class="position-absolute mt-4">
                         <p class=""><span style="font-weight: bold;">Create a Page</span> for a celebrity, brand or business</p>
@@ -35,5 +35,20 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            var btnForgot = document.getElementById('forgot-password');
+            var btnCreateAccount = document.getElementById('create-account')
+
+            btnForgot.onclick = function(){
+                location.assign('https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0')
+            }
+
+            btnCreateAccount.onclick = function(){
+                location.assign('https://www.facebook.com/r.php?r=101')
+            }
+
+        </script>
+
     </body>
 </html>
